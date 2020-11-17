@@ -1,15 +1,18 @@
 <template>
-  <div id="app">
+  <div id="app" class="site">
     <Navbar />
-    <router-view />
+    <router-view class="site-content" />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 export default {
   components: {
     Navbar,
+    Footer,
   },
 };
 </script>
@@ -33,5 +36,14 @@ export default {
       color: #42b983;
     }
   }
+}
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
 }
 </style>
