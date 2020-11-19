@@ -11,12 +11,12 @@
         </b-navbar-item>
       </template>
       <template slot="start">
-        <b-navbar-item href="/home"> Home </b-navbar-item>
-        <b-navbar-item href="#"> Documentation </b-navbar-item>
-        <b-navbar-dropdown label="Info">
-          <b-navbar-item href="#"> About </b-navbar-item>
-          <b-navbar-item href="#"> Contact </b-navbar-item>
-        </b-navbar-dropdown>
+        <b-navbar-item class="has-text-info" href="/home"> Home </b-navbar-item>
+        <b-navbar-item class="has-text-info" href="#">
+          Documentation
+        </b-navbar-item>
+        <b-navbar-item class="has-text-info" href="#"> About </b-navbar-item>
+        <b-navbar-item class="has-text-info" href="#"> Contact </b-navbar-item>
       </template>
 
       <template slot="end">
