@@ -1,16 +1,34 @@
 <template>
   <section class="section has-text-right ml-6 mr-5">
-    <div class="container">
+    <div class="container" v-for="post in Posts" :key="post.id">
       <h1 class="title">Section</h1>
       <h2 class="subtitle">
-        A simple container to divide your page into <strong>sections</strong>,
-        like the one you're currently reading
+       {{post.title}}
       </h2>
       <p class="">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus quod
-        rem rerum sint fugiat optio nesciunt quibusdam similique? Quas eaque
-        soluta id porro impedit! Minus!
+        {{post.body}}
       </p>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  computed: {
+    Posts() {
+      return this.$store.state.posts;
+    },
+  },
+  methods: {
+    getPosts() {
+      return this.$store.state.posts;
+    },
+  },
+  mounted() {
+    console.log(this.getPosts());
+  },
+  created() {
+    this.$store.dispatch("getPosts");
+  },
+};
+</script>
