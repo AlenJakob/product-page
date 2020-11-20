@@ -1,11 +1,20 @@
 <template>
   <div class="home">
-   <h1>da</h1>
+    <section1 />
+    <section2 />
+    <section3 />
   </div>
 </template>
 
 <script>
+import section1 from "../components/sections/Section-1";
+import section2 from "../components/sections/Section-2";
+import section3 from "../components/sections/Section-3";
 export default {
-  components: {},
+  components: {
+    section1,
+    section2,
+    section3,
+  },
 };
 </script>
