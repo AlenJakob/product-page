@@ -13,6 +13,13 @@
             "img": "https://cdn.pixabay.com/photo/2016/01/19/14/55/mountain-bike-1149074_1280.jpg",
             "title": "Best MTB Merida Bike Ever!",
             "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque laudantium cupiditate rem libero tenetur in ullam similique eum sequi nam ut voluptates, natus animi cum velit saepe non maiores quae repellendus officia hic? Consequuntur dolorum rem nam omnis illum quo similique est vitae minus provident mollitia facere doloremque, quas magnam culpa earum repellat tenetur."
+        },
+        {
+            "id": 3,
+            "name": "Romet",
+            "img": "https://cdn.pixabay.com/photo/2020/04/17/14/07/athlete-5055367_1280.jpg",
+            "title": "Romet new Bike",
+            "content": "Culpa doloremque laudantium cupiditate rem libero tenetur in ullam similique eum sequi nam ut voluptates, natus animi cum velit saepe non maiores quae repellendus officia hic? Consequuntur dolorum rem nam omnis illum quo similique est vitae minus provident mollitia facere doloremque, quas magnam culpa earum repellat tenetur."
         }
     ]
 }
