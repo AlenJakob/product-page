@@ -4,15 +4,13 @@
     <b-navbar>
       <!-- src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png" -->
       <template slot="brand">
-        <b-navbar-item tag="router-link" :to="{ path: '/' }">
+        <b-navbar-item class="mr-6" tag="router-link" :to="{ path: '/' }">
           <img src="@/assets/logo.png" alt="Logo Bike4US" />
         </b-navbar-item>
       </template>
       <template slot="start">
-        <b-navbar-item class="has-text-dark" href="/home"> Home </b-navbar-item>
-        <b-navbar-item class="has-text-dark" href="#">
-          Documentation
-        </b-navbar-item>
+        <b-navbar-item class="has-text-dark" href="/"> Home </b-navbar-item>
+        <b-navbar-item class="has-text-dark" href="#"> Shop </b-navbar-item>
         <b-navbar-item class="has-text-dark" href="#"> About </b-navbar-item>
         <b-navbar-item class="has-text-dark" href="#"> Contact </b-navbar-item>
       </template>
@@ -51,6 +49,9 @@ export default {
 .navbar-item img {
   max-height: 4rem;
   margin: 1rem;
+}
+.navbar-item {
+  font-size: 1.5rem !important;
 }
 </style>
 

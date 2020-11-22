@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div class="container mt-6">
+      <h1 class="title is-2">Articles</h1>
+    </div>
     <section1 />
     <!-- <section2 />
     <section3 /> -->
