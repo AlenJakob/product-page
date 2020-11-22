@@ -1,18 +1,9 @@
 <template>
-  <b-carousel
-    :indicator="indicator"
-    :indicator-background="indicatorBackground"
-    :indicator-inside="indicatorInside"
-    :indicator-mode="indicatorMode"
-    :indicator-position="indicatorPosition"
-    :indicator-style="indicatorStyle"
-  >
-    <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
-      <section :class="`hero is-medium is-${carousel.color}`" src="https://cdn.pixabay.com/photo/2013/03/19/18/23/mountain-biking-95032_1280.jpg">
-        <div class="hero-body has-text-centered">
-          <h1 class="title">{{ carousel.title }}</h1>
-        </div>
-      </section>
+  <b-carousel class="hero is-medium" :indicator-inside="false">
+    <b-carousel-item v-for="(item, i) in carousels" :key="i" :has-drag="drag">
+      <span class="image">
+        <img :src="item.image" />
+      </span>
     </b-carousel-item>
   </b-carousel>
 </template>
@@ -21,6 +12,7 @@
 export default {
   data() {
     return {
+      drag: true,
       indicator: true,
       indicatorBackground: true,
       indicatorInside: true,
@@ -28,12 +20,56 @@ export default {
       indicatorPosition: "is-bottom",
       indicatorStyle: "is-dots",
       carousels: [
-        { title: "Slide 1", color: "info" },
-        { title: "Slide 2", color: "success" },
-        { title: "Slide 3", color: "warning" },
-        { title: "Slide 4", color: "danger" },
+        {
+          title: "Slide 1",
+          color: "info",
+          image:
+            "https://cdn.pixabay.com/photo/2019/06/25/11/11/mountain-bike-4297972_1280.jpg",
+        },
+        {
+          title: "Slide 2",
+          color: "success",
+          image:
+            "https://cdn.pixabay.com/photo/2020/11/08/15/36/mountain-5724055_1280.jpg",
+        },
+        {
+          title: "Slide 3",
+          color: "warning",
+          image:
+            "https://cdn.pixabay.com/photo/2015/07/02/10/13/cycling-828646_1280.jpg",
+        },
+        {
+          title: "Slide 4",
+          color: "danger",
+          image:
+            "https://cdn.pixabay.com/photo/2016/11/18/21/26/bike-1836934_1280.jpg",
+        },
       ],
     };
   },
+  methods: {},
 };
 </script>
+
+<style >
+.carousel-indicator{
+    background: rgba(65, 105, 225, 0.473);
+}
+.carousel-item .image img {
+  object-fit: cover;
+  object-position: center center;
+  max-height: 400px;
+}
+.carousel .carousel-indicator .indicator-item .indicator-style {
+  border: 1px solid #167df0;
+}
+.carousel .carousel-indicator .indicator-item.is-active .indicator-style,
+.carousel .carousel-indicator .indicator-item .indicator-style:hover {
+  background: #167df0;
+  border: 1px solid white;
+}
+.carousel .carousel-indicator .indicator-item .indicator-style.is-dots{
+    width: 35px;
+    height: 15px;
+}
+</style>
