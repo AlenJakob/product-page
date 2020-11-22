@@ -1,0 +1,18 @@
+{
+    "bikes": [
+        {
+            "id": 1,
+            "name": "Kross",
+            "img": "fakeurl.png",
+            "title": "Best MTB Kross Bike Ever!",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque laudantium cupiditate rem libero tenetur in ullam similique eum sequi nam ut voluptates, natus animi cum velit saepe non maiores quae repellendus officia hic? Consequuntur dolorum rem nam omnis illum quo similique est vitae minus provident mollitia facere doloremque, quas magnam culpa earum repellat tenetur."
+        },
+        {
+            "id": 2,
+            "name": "Merida",
+            "img": "fakeurl.png",
+            "title": "Best MTB Merida Bike Ever!",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloremque laudantium cupiditate rem libero tenetur in ullam similique eum sequi nam ut voluptates, natus animi cum velit saepe non maiores quae repellendus officia hic? Consequuntur dolorum rem nam omnis illum quo similique est vitae minus provident mollitia facere doloremque, quas magnam culpa earum repellat tenetur."
+        }
+    ]
+}

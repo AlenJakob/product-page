@@ -25,7 +25,7 @@ export default {
     },
   },
   mounted() {
-    console.log(this.getPosts());
+    console.log(this.$store.state.posts);
   },
   created() {
     this.$store.dispatch("getPosts");
