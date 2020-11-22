@@ -5,16 +5,18 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    posts: [],
+    bikes: [],
     info: "Hello",
   },
   actions: {
-    async getPosts({ commit }) {
+    async getBikes({ commit }) {
       try {
-        const posts = await axios.get(
-          "https://jsonplaceholder.typicode.com/posts"
+        const bikes = await axios.get(
+          // "https://jsonplaceholder.typicode.com/bikes"
+          // "https://github.com/AlenJakob/product-page/blob/master/db.json"
+          "http://my-json-server.typicode.com/AlenJakob/product-page/blob/master/bikes"
         );
-        commit("LOAD_POSTS", posts.data);
+        commit("LOAD_BIKES", bikes.data);
       } catch (error) {
         console.log(error, "get Error");
       }
@@ -27,8 +29,8 @@ export default new Vuex.Store({
 
   mutations: {
     //   change state
-    LOAD_POSTS(state, posts) {
-      this.state.posts = posts;
+    LOAD_BIKES(state, bikes) {
+      this.state.bikes = bikes;
     },
     SET_ID(state, currentID) {
       state.currentID = currentID;
