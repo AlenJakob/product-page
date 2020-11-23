@@ -14,7 +14,6 @@ export default {
   },
   created() {
     this.$store.dispatch("getbikesPriceList");
-    console.log(this.$store.state.bikesPriceList);
   },
 };
 </script>
