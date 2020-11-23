@@ -8,11 +8,11 @@
           <img src="@/assets/logo.png" alt="Logo Bike4US" />
         </b-navbar-item>
       </template>
-      <template slot="start">
-        <b-navbar-item class="has-text-dark" href="/"> Home </b-navbar-item>
-        <b-navbar-item class="has-text-dark" href="#"> Shop </b-navbar-item>
-        <b-navbar-item class="has-text-dark" href="#"> About </b-navbar-item>
-        <b-navbar-item class="has-text-dark" href="#"> Contact </b-navbar-item>
+      <template class="navigation" slot="start">
+        <b-navbar-item href="/"> Home </b-navbar-item>
+        <b-navbar-item href="#"> Shop </b-navbar-item>
+        <b-navbar-item href="#"> About </b-navbar-item>
+        <b-navbar-item href="#"> Contact </b-navbar-item>
       </template>
 
       <template slot="end">
@@ -51,7 +51,14 @@ export default {
   margin: 1rem;
 }
 .navbar-item {
-  font-size: 1.5rem !important;
+  transition: 0.2s;
+  font-size: 1.2rem !important;
+  align-items: flex-end;
+  border-top: 5px solid transparent;
+}
+.navbar-start .navbar-item:hover {
+  background: #167df0;
+  color: #fff;
 }
 </style>
 

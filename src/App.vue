@@ -14,6 +14,7 @@ export default {
     Navbar,
     Footer,
   },
+  methods: {},
 };
 </script>
 <style lang="scss">

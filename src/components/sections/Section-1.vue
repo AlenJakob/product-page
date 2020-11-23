@@ -3,7 +3,8 @@
     <div class="container mb-6" v-for="bike in Bikes" :key="bike.id">
       <div class="card">
         <div class="card-image">
-          <figure class="image is-2by1">
+          <!-- <figure class="image is-2by1"> -->
+         <figure class="image  is-16by9">
             <img :src="bike.img" alt="Placeholder image" />4
             <h1 class="title">{{ bike.img }}</h1>
           </figure>
