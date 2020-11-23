@@ -24,7 +24,7 @@ export default new Vuex.Store({
         const bikesPriceList = await axios.get(
           "http://my-json-server.typicode.com/AlenJakob/product-page/blob/master/bikesPriceList"
         );
-        commit("LOAD_BIKES_PRICE_LIST", bikesPriceList.data);
+        commit("LOAD_PRICE_LIST", bikesPriceList.data);
       } catch (error) {
         console.log(error, "get Error");
       }
@@ -40,8 +40,8 @@ export default new Vuex.Store({
     LOAD_BIKES(state, bikes) {
       this.state.bikes = bikes;
     },
-    LOAD_BIKES_PRICE_LIST(state, bikesPriceList) {
-      state.bikesPriceList = bikesPriceList;
+    LOAD_PRICE_LIST(state, bikesPriceList) {
+      this.state.bikesPriceList = bikesPriceList;
     },
   },
 });
