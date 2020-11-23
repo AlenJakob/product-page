@@ -9,6 +9,9 @@
 
 <script>
 export default {
+  mounted() {
+    console.log(this.$store.state.bikesPriceList);
+  },
   created() {
     this.$store.dispatch("getbikesPriceList");
     console.log(this.$store.state.bikesPriceList);
