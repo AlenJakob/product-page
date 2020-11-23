@@ -10,7 +10,7 @@
       </template>
       <template class="navigation" slot="start">
         <b-navbar-item href="/"> Home </b-navbar-item>
-        <b-navbar-item href="#"> Shop </b-navbar-item>
+        <b-navbar-item href="/shop"> Shop </b-navbar-item>
         <b-navbar-item href="#"> About </b-navbar-item>
         <b-navbar-item href="#"> Contact </b-navbar-item>
       </template>

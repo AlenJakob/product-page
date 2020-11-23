@@ -6,17 +6,25 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     bikes: [],
-    info: "Hello",
+    bikesPriceList: [],
   },
   actions: {
     async getBikes({ commit }) {
       try {
         const bikes = await axios.get(
-          // "https://jsonplaceholder.typicode.com/bikes"
-          // "https://github.com/AlenJakob/product-page/blob/master/db.json"
           "http://my-json-server.typicode.com/AlenJakob/product-page/blob/master/bikes"
         );
         commit("LOAD_BIKES", bikes.data);
+      } catch (error) {
+        console.log(error, "get Error");
+      }
+    },
+    async getbikesPriceList({ commit }) {
+      try {
+        const bikesPriceList = await axios.get(
+          "http://my-json-server.typicode.com/AlenJakob/product-page/blob/master/bikesPriceList"
+        );
+        commit("LOAD_BIKES_PRICE_LIST", bikesPriceList.data);
       } catch (error) {
         console.log(error, "get Error");
       }
@@ -32,8 +40,8 @@ export default new Vuex.Store({
     LOAD_BIKES(state, bikes) {
       this.state.bikes = bikes;
     },
-    SET_ID(state, currentID) {
-      state.currentID = currentID;
+    LOAD_BIKES_PRICE_LIST(state, bikesPriceList) {
+      state.bikesPriceList = bikesPriceList;
     },
   },
 });
