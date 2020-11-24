@@ -26,15 +26,14 @@
         </b-navbar-item>
       </template>
     </b-navbar>
-    <Hero />
+  
   </div>
 </template>
 
 <script>
-import Hero from "@/components/Hero.vue";
 export default {
   components: {
-    Hero,
+ 
   },
   data() {
     return {};
