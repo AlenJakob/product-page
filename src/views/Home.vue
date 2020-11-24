@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <Hero />
-
     <div class="container mt-6">
       <h1 class="title is-2">Articles</h1>
     </div>
