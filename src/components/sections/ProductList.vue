@@ -7,7 +7,7 @@
     >
       <section class="section has-text-left ml-6 mr-5">
         <div class="container">
-          <h1 class="title">Section</h1>
+       
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
@@ -20,8 +20,9 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="title is-4">John Smith</p>
-                  <p class="subtitle is-6">@johnsmith</p>
+                  <p class="title is-4">  {{product.name}}</p>
+                  <p class="subtitle is-6">#{{product.name}}</p>
+                  <h1 class="has-text-right title is-4 has-text-danger">{{product.price}}€</h1>
                 </div>
               </div>
 
