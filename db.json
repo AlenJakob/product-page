@@ -21,5 +21,28 @@
             "title": "Romet new Bike",
             "content": "Culpa doloremque laudantium cupiditate rem libero tenetur in ullam similique eum sequi nam ut voluptates, natus animi cum velit saepe non maiores quae repellendus officia hic? Consequuntur dolorum rem nam omnis illum quo similique est vitae minus provident mollitia facere doloremque, quas magnam culpa earum repellat tenetur."
         }
+    ],
+    "bikesPriceList": [
+        {
+            "id": 1,
+            "name": "Kross",
+            "price": 1890,
+            "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates, ducimus recusandae quibusdam vero eligendi libero omnis at saepe ad dolor sequi. Quidem nam enim voluptate voluptates ducimus odio voluptas soluta blanditiis saepe aliquam.",
+            "wheelSize": [
+                26,
+                27.5
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Romet",
+            "price": 1490,
+            "description": "Voluptates, ducimus recusandae quibusdam vero eligendi libero omnis at saepe ad dolor sequi. Quidem nam enim voluptate voluptates ducimus odio voluptas soluta blanditiis saepe aliquam.",
+            "wheelSize": [
+                24,
+                26,
+                27.5
+            ]
+        }
     ]
 }
