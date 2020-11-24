@@ -43,6 +43,16 @@
                 26,
                 27.5
             ]
+        },
+        {
+            "id": 3,
+            "name": "Cross",
+            "price": 1190,
+            "description": "Jomnis at saepe ad dolor sequi. Quidem nam enim voluptate voluptates ducimus odio voluptas soluta blanditiis saepe aliquam.",
+            "wheelSize": [
+                26,
+                27.5
+            ]
         }
     ]
 }

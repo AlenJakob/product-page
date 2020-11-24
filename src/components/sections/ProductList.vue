@@ -1,6 +1,10 @@
 <template>
   <div class="columns">
-    <div class="column is-one-fifth">
+    <div
+      class="column is-4"
+      v-for="product in priceProductList"
+      :key="product.id"
+    >
       <section class="section has-text-left ml-6 mr-5">
         <div class="container">
           <h1 class="title">Section</h1>
@@ -43,8 +47,14 @@ export default {
   mounted() {
     console.log(this.$store.state.bikesPriceList);
   },
+  computed: {
+    priceProductList() {
+      return this.$store.state.bikesPriceList;
+    },
+  },
   created() {
     this.$store.dispatch("getbikesPriceList");
+    console.log(this.bikesPriceList);
   },
 };
 </script>
