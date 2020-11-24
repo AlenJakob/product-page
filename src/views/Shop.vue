@@ -1,14 +1,14 @@
 <template>
   <div>
-    <section2 />
+    <ProductList />
   </div>
 </template>
 
 <script>
-import section2 from "../components/sections/Section-2";
+import ProductList from "../components/sections/ProductList";
 export default {
   components: {
-    section2,
+    ProductList,
   },
 };
 </script>
