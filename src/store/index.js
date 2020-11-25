@@ -22,7 +22,6 @@ export default new Vuex.Store({
     async getbikesPriceList({ commit }) {
       try {
         const bikesPriceList = await axios.get(
-          // "http://my-json-server.typicode.com/AlenJakob/product-page/blob/master/bikesPriceList"
           "http://my-json-server.typicode.com/AlenJakob/product-page/blob/master/bikesPriceList"
         );
         commit("LOAD_PRICE_LIST", bikesPriceList.data);

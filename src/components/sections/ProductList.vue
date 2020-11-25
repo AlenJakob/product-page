@@ -1,13 +1,12 @@
 <template>
-  <div class="columns">
+  <div class="columns is-variable is-multiline is-mobile">
     <div
-      class="column is-4"
+      class="column is-6"
       v-for="product in priceProductList"
       :key="product.id"
     >
       <section class="section has-text-left ml-6 mr-5">
         <div class="container">
-       
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
@@ -20,9 +19,11 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="title is-4">  {{product.name}}</p>
-                  <p class="subtitle is-6">#{{product.name}}</p>
-                  <h1 class="has-text-right title is-4 has-text-danger">{{product.price}}€</h1>
+                  <p class="title is-4">{{ product.name }}</p>
+                  <p class="subtitle is-6">#{{ product.name }}</p>
+                  <h1 class="has-text-right title is-4 has-text-danger">
+                    {{ product.price }}€
+                  </h1>
                 </div>
               </div>
 
