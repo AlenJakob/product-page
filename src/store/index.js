@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     bikes: [],
     bikesPriceList: [],
+    productCart: [],
   },
   actions: {
     async getBikes({ commit }) {
@@ -42,6 +43,10 @@ export default new Vuex.Store({
     },
     LOAD_PRICE_LIST(state, bikesPriceList) {
       this.state.bikesPriceList = bikesPriceList;
+    },
+    addProduct(state, product) {
+      // mutate state
+      state.productCart.push(product);
     },
   },
 });

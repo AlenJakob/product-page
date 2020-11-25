@@ -33,6 +33,7 @@
                 <a href="#">#css</a>
                 <a href="#">#responsive</a>
                 <br />
+                <button @click="addProduct(product)" class="button">Add</button>
                 <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
               </div>
             </div>
@@ -46,6 +47,16 @@
 
 <script>
 export default {
+  methods: {
+    test(product) {
+      console.log(product);
+    },
+    addProduct(product) {
+      this.$store.commit("addProduct", product);
+      console.log(this.$store.state.productCart);
+      console.log(this.$store.state.productCart.length);
+    },
+  },
   mounted() {
     console.log(this.$store.state.bikesPriceList);
   },
@@ -57,6 +68,7 @@ export default {
   created() {
     this.$store.dispatch("getbikesPriceList");
     console.log(this.bikesPriceList);
+    console.log(this.$store.state.productCart);
   },
 };
 </script>
