@@ -1,5 +1,5 @@
 <template>
-  <div class="columns is-variable is-multiline is-mobile">
+  <div class="columns container is-multiline">
     <div
       class="column is-6"
       v-for="product in priceProductList"
