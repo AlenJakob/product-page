@@ -1,17 +1,47 @@
 <template>
   <div id="modal" class="modal">
-    <div class="modal-card ">
-      <header class="modal-card-head ">
-        <p class="modal-card-title">Modal title</p>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">
+          Shop Cart ( {{ this.$store.state.productCart.length }} ) Total Price (
+          {{ totalCost }} )
+        </p>
         <button @click="closeModal" class="delete" aria-label="close"></button>
       </header>
-      <section
-        class="modal-card-body is-danger"
-        v-for="product in this.$store.state.productCart"
-        :key="product.id"
-      >
-        {{ product.name }}
-      </section>
+      <ul class="menu-list">
+        <li
+          class="modal-card-body"
+          v-for="product in this.$store.state.productCart"
+          :key="Math.random(product.id)"
+        >
+          <!-- begin of box -->
+          <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img
+                    src="https://bulma.io/images/placeholders/128x128.png"
+                    alt="Image"
+                  />
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p class="has-text-left">
+                    <strong> {{ product.name }}</strong>
+                    <br />
+                    <strong class="has-text-danger">
+                      {{ product.price }}$</strong
+                    >
+                  </p>
+                </div>
+                <nav class="level is-mobile"></nav>
+              </div>
+            </article>
+          </div>
+          <!-- end of box -->
+        </li>
+      </ul>
       <footer class="modal-card-foot"></footer>
     </div>
   </div>
@@ -19,25 +49,33 @@
 
 <script>
 export default {
-  data() {
-    return {
-      productList: [],
-    };
-  },
   methods: {
     closeModal() {
-      document.querySelector("#modal").classList.remove("showModal");
+      document.querySelector("#modal").classList.toggle("showModal");
     },
+      totalCost() {
+        const stock = this.$store.state.productCart;
+        const result = stock.reduce((a, b) => ({x: a.x + b.x}));
+
+        console.log(stock);
+        console.log(result);
+    
+    }
   },
   mounted() {
-    this.productList.push(this.$store.state.productCart);
-    console.log(this.productList);
+    this.totalCost();
   },
 };
 </script>
 
 
 <style lang="scss">
+.list-item {
+  list-style: decimal;
+}
+.modal-card-body {
+  padding: 0.2rem !important;
+}
 </style>
 
 // https://medium.com/js-dojo/how-to-permanently-save-data-with-vuex-localstorage-in-your-vue-app-f1d5c140db69
