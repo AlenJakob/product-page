@@ -2,7 +2,7 @@
   <footer class="footer site-content">
     <div class="content has-text-centered">
       <p>
-        <strong>ShoesMax</strong> Created by
+        <strong>Bike4US</strong> Created by
         <a class="has-text-info " href="https://jgthms.com">Alen Jakob</a>. The
         contact
 

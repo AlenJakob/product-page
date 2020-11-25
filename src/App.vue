@@ -46,4 +46,7 @@ export default {
 .site-content {
   flex: 1;
 }
+.showModal {
+  display: block !important;
+}
 </style>

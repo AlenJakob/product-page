@@ -11,13 +11,16 @@
       <template class="navigation" slot="start">
         <b-navbar-item href="/"> Home </b-navbar-item>
         <b-navbar-item href="/shop"> Shop </b-navbar-item>
-        <b-navbar-item href="#"> About </b-navbar-item>
-        <b-navbar-item href="#"> Contact </b-navbar-item>
+        <b-navbar-item href="/about"> About </b-navbar-item>
+        <b-navbar-item href="/contact"> Contact </b-navbar-item>
       </template>
 
       <template slot="end">
         <b-navbar-item tag="div">
           <div class="buttons">
+            <a class="button is-info" @click="showModal">
+              <strong>Cart ( {{ getProductCartLength }} )</strong>
+            </a>
             <a class="button is-dark">
               <strong>Sign up</strong>
             </a>
@@ -26,17 +29,26 @@
         </b-navbar-item>
       </template>
     </b-navbar>
-  
+    <cartModal />
   </div>
 </template>
 
 <script>
+import cartModal from "../components/cartModal";
 export default {
   components: {
- 
+    cartModal,
   },
-  data() {
-    return {};
+  methods: {
+    showModal() {
+      console.log(document.querySelector("#modal"));
+      document.querySelector("#modal").classList.toggle("showModal");
+    },
+  },
+  computed: {
+    getProductCartLength() {
+      return this.$store.state.productCart.length;
+    },
   },
 };
 </script>
@@ -44,7 +56,7 @@ export default {
 
 
 
-<style scoped lang="scss">
+<style  lang="scss">
 .navbar-item img {
   max-height: 4rem;
   margin: 1rem;
@@ -56,7 +68,7 @@ export default {
   border-top: 5px solid transparent;
 }
 .navbar-start .navbar-item:hover {
-  background: #167df0;
+  background: #363636;
   color: #fff;
 }
 </style>
