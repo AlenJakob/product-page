@@ -12,7 +12,7 @@
       <ul class="menu-list">
         <li
           class="modal-card-body"
-          v-for="product in this.$store.state.productCart"
+          v-for="(product, index) in this.$store.state.productCart"
           :key="Math.random(product.id)"
         >
           <!-- begin of box -->
@@ -28,6 +28,7 @@
               </div>
               <div class="media-content">
                 <div class="content">
+                  <p class="has-text-left">{{ index }}</p>
                   <p class="has-text-left">
                     <strong> {{ product.name }}</strong>
                     <br />
@@ -67,6 +68,17 @@ export default {
 
 
 <style lang="scss">
+.menu-list {
+  overflow-y: scroll;
+  & .modal-card-body:nth-child(even) {
+    // background: rgb(230, 230, 230) !important;
+    opacity: 0.9;
+    & .box {
+      // background: rgb(230, 230, 230) !important;
+      opacity: 0.9;
+    }
+  }
+}
 .list-item {
   list-style: decimal;
 }

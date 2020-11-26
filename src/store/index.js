@@ -49,6 +49,16 @@ export default new Vuex.Store({
       state.productCart.push(product);
     },
   },
+  data: {
+    myprop: null, // no attempt at defining initial state
+  },
+  watch: {
+    "$store.state.productCart": function(nv) {
+      this.myprop = nv;
+      console.log("work");
+      console.log(this.$store.state.productCart, "--------------------here");
+    },
+  },
 });
 
 // fetch('https://jsonplaceholder.typicode.com/todos/1')
