@@ -1,6 +1,6 @@
 <template>
   <div id="modal" class="modal">
-  <div @click="closeModal" class="modal-background"></div>
+    <div @click="closeModal" class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title">
@@ -54,17 +54,14 @@ export default {
     closeModal() {
       document.querySelector("#modal").classList.toggle("showModal");
       document.querySelector(".modal-background").classList.toggle("showModal");
-    }
-    
+    },
   },
-  computed:{
+  computed: {
     totalCost() {
       const stock = this.$store.state.productCart;
-     return  stock
-        .map((prod) => prod.price)
-        .reduce((a, b) => a + b, 0);
+      return stock.map((prod) => prod.price).reduce((a, b) => a + b, 0);
     },
-  }
+  },
 };
 </script>
 

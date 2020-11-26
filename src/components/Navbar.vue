@@ -9,10 +9,12 @@
         </b-navbar-item>
       </template>
       <template class="navigation" slot="start">
-        <b-navbar-item href="/"> Home </b-navbar-item>
-        <b-navbar-item href="/shop"> Shop </b-navbar-item>
-        <b-navbar-item href="/about"> About </b-navbar-item>
-        <b-navbar-item href="/contact"> Contact </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="'/'"> Home </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="'/shop'"> Shop </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="'/about'"> About </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="'/contact'">
+          Contact
+        </b-navbar-item>
       </template>
 
       <template slot="end">
@@ -35,7 +37,13 @@
 
 <script>
 import cartModal from "../components/cartModal";
+
 export default {
+  data() {
+    return {
+      inheritAttrs: false,
+    };
+  },
   components: {
     cartModal,
   },
