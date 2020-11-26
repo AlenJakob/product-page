@@ -1,10 +1,11 @@
 <template>
   <div id="modal" class="modal">
+  <div @click="closeModal" class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title">
           Shop Cart ( {{ this.$store.state.productCart.length }} ) Total Price (
-          {{ totalCost }} )
+          {{ totalCost }} $)
         </p>
         <button @click="closeModal" class="delete" aria-label="close"></button>
       </header>
@@ -52,19 +53,18 @@ export default {
   methods: {
     closeModal() {
       document.querySelector("#modal").classList.toggle("showModal");
-    },
-      totalCost() {
-        const stock = this.$store.state.productCart;
-        const result = stock.reduce((a, b) => ({x: a.x + b.x}));
-
-        console.log(stock);
-        console.log(result);
-    
+      document.querySelector(".modal-background").classList.toggle("showModal");
     }
+    
   },
-  mounted() {
-    this.totalCost();
-  },
+  computed:{
+    totalCost() {
+      const stock = this.$store.state.productCart;
+     return  stock
+        .map((prod) => prod.price)
+        .reduce((a, b) => a + b, 0);
+    },
+  }
 };
 </script>
 
