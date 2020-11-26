@@ -28,7 +28,9 @@
               </div>
               <div class="media-content">
                 <div class="content">
-                  <p class="has-text-left">{{ index }}</p>
+                  <p class="has-text-weight-semibold box has-text-primary">
+                    {{ index + 1 }}
+                  </p>
                   <p class="has-text-left">
                     <strong> {{ product.name }}</strong>
                     <br />
@@ -68,14 +70,19 @@ export default {
 
 
 <style lang="scss">
+.content .box {
+  max-width: 40px;
+  max-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .menu-list {
   overflow-y: scroll;
   & .modal-card-body:nth-child(even) {
-    // background: rgb(230, 230, 230) !important;
-    opacity: 0.9;
+    opacity: 0.95;
     & .box {
-      // background: rgb(230, 230, 230) !important;
-      opacity: 0.9;
+      opacity: 0.95;
     }
   }
 }
