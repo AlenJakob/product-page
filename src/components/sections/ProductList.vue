@@ -29,12 +29,31 @@
 
               <div class="content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
+                Phasellus nec iaculis mauris.
+
+                <label class="label mt-5">Wheel size :</label>
+                <div class="control">
+                  <div class="select">
+                    <select v-model="wheelSize">
+                      <option
+                        :value="wheelSize"
+                        v-for="size in product.wheelSize"
+                        :key="size.id"
+                      >
+                        {{ size }}
+                      </option>
+                    </select>
+                  </div>
+                </div>
                 <br />
-                <button @click="addProduct(product)" class="button">Add</button>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                <div class="box container mt-5">
+                  <button
+                    @click="addProduct(product)"
+                    class="button is-primary"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -47,19 +66,17 @@
 
 <script>
 export default {
+  data() {
+    return {
+      wheelSize: "",
+    };
+  },
   methods: {
-    test(product) {
-      console.log(product);
-    },
     addProduct(product) {
       this.$store.commit("addProduct", product);
-      console.log(this.$store.state.productCart);
-      console.log(this.$store.state.productCart.length);
     },
   },
-  mounted() {
-    console.log(this.$store.state.bikesPriceList);
-  },
+  mounted() {},
   computed: {
     priceProductList() {
       return this.$store.state.bikesPriceList;
@@ -67,8 +84,6 @@ export default {
   },
   created() {
     this.$store.dispatch("getbikesPriceList");
-    console.log(this.bikesPriceList);
-    console.log(this.$store.state.productCart);
   },
 };
 </script>
