@@ -3,14 +3,11 @@
     <div class="content has-text-centered">
       <p>
         <strong>Bike4US</strong> Created by
-        <a class="has-text-info " href="https://jgthms.com">Alen Jakob</a>. The
-        contact
+        <a class="has-text-info" href="https://github.com/AlenJakob"
+          >Alen Jakob</a
+        >. The contact
 
-        <a
-          class="has-text-info"
-          href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-          >Grafixa</a
-        >.
+        <a class="has-text-info" href="https://github.com/AlenJakob">Grafixa</a>.
       </p>
     </div>
   </footer>
