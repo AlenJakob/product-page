@@ -95,3 +95,6 @@ export default {
 </style>
 
 // https://medium.com/js-dojo/how-to-permanently-save-data-with-vuex-localstorage-in-your-vue-app-f1d5c140db69
+
+// https://fiufiu.co/lancuszek-srebrny-gory-w-rombie-52?gclid=CjwKCAiA5IL-BRAzEiwA0lcWYkeHL952Qy97iyPhpPHikvHclsCi7gELxqxVnRDoSJdmHVE-9fuysRoCQAoQAvD_BwE
+// https://fiufiu.co/lancuszek-srebrny-gory-w-sercu-25
