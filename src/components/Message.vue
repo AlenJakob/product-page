@@ -2,7 +2,6 @@
   <article id="message" class="message-fixed is-success is-medium message">
     <div class="message-header">
       <p>Success</p>
-      <button class="delete" aria-label="delete"></button>
     </div>
     <div class="message-body">Product has been added to cart</div>
   </article>
