@@ -1,14 +1,14 @@
 <template>
   <div>
     <Message id="message" class="show-off" />
-    <div class="columns container is-multiline">
+    <div class="columns   is-multiline">
       <div
         @scroll="onScroll()"
-        class="column is-6"
+        class="section column is-4"
         v-for="product in priceProductList"
         :key="product.id"
       >
-        <section class="section has-text-left ml-6 mr-5">
+        <section class=" has-text-left ">
           <div class="container">
             <div class="card">
               <div class="card-image">
