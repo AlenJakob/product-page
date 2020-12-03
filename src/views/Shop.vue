@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ProductList  />
+    <ProductList />
   </div>
 </template>
 
@@ -12,3 +12,4 @@ export default {
   },
 };
 </script>
+
